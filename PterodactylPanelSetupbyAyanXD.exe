@@ -1,0 +1,63 @@
+#include <stdio.h>
+
+void setupPanel();
+void configurePanel();
+void optimizePanel();
+
+int main() {
+    int choice;
+
+    do {
+        printf("Pterodactyl Panel Management\n");
+        printf("1. Setup Panel\n");
+        printf("2. Configure Panel\n");
+        printf("3. Optimize Panel\n");
+        printf("4. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch(choice) {
+            case 1:
+                setupPanel();
+                break;
+            case 2:
+                configurePanel();
+                break;
+            case 3:
+                optimizePanel();
+                break;
+            case 4:
+                printf("Exiting program.\n");
+                break;
+            default:
+                printf("Invalid choice. Please select again.\n");
+        }
+        printf("\n");
+    } while(choice != 4);
+
+    return 0;
+}
+
+void setupPanel() {
+    printf("Setting up Pterodactyl Panel...\n");
+    printf("Downloading necessary files...\n");
+    printf("Installing dependencies...\n");
+    printf("Configuring database...\n");
+    printf("Setup completed successfully.\n");
+}
+
+void configurePanel() {
+    printf("Configuring Pterodactyl Panel...\n");
+    printf("Setting up environment variables...\n");
+    printf("Configuring network settings...\n");
+    printf("Saving configuration...\n");
+    printf("Configuration completed successfully.\n");
+}
+
+void optimizePanel() {
+    printf("Optimizing Pterodactyl Panel...\n");
+    printf("Optimizing database performance...\n");
+    printf("Configuring cache...\n");
+    printf("Applying security patches...\n");
+    printf("Optimization completed successfully.\n");
+}
